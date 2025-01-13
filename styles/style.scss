@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+.calculator {
+    width: 500px;
+    background-color: rgb(37, 36, 36);
+
+    &-screen{
+        padding: 20px;
+        min-height: 88px;
+        background-color: #A7AF7C;
+    }
+}
