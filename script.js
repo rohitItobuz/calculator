@@ -8,6 +8,10 @@ const percentage_button = document.querySelector("#percentage-button");
 const square_button = document.querySelector("#square-button");
 const power_button = document.querySelector("#power-button");
 const screen = document.querySelector("#screen");
+const date_time = document.querySelector('#date-time');
+const history = document.querySelector('#history');
+const history_button = document.querySelector('#history-button');
+const button_container = document.querySelector('#calculator-button-container');
 let equation = "";
 let operator_count = 0;
 let operator;
@@ -107,4 +111,34 @@ backspace_button.addEventListener("click", () => {
   screen.textContent = equation;
 });
 
-solve_button.addEventListener("click", evaluate);
+const toggleDisplay = () => {
+  history.classList.toggle("display-none");
+  screen.classList.toggle("d-none");
+  button_container.classList.toggle("display-none");
+}
+
+const updateHistory = (result) => {
+  equation = result;
+  screen.textContent = equation;
+  toggleDisplay();
+}
+
+solve_button.addEventListener("click", () => {
+  const newResult = document.createElement("p");
+  newResult.setAttribute('class', 'text-white border border-white p-2 rounded-2');
+  newResult.textContent = equation;
+  evaluate();
+  newResult.textContent += ` = ${equation}`;
+  newResult.setAttribute("onClick", `updateHistory(${equation})`);
+  if (newResult.textContent !== '')
+    history.appendChild(newResult);
+});
+
+history_button.addEventListener('click', () => {
+  toggleDisplay();
+})
+
+setInterval(() => {
+  const dateTime = new Date();
+  date_time.textContent = dateTime.toString().slice(0, 24);
+}, 500);
