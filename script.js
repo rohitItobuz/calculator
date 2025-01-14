@@ -14,7 +14,6 @@ let operator;
 
 const evaluate = () => {
   const operator_index = equation.indexOf(operator, 1);
-
   const number1 = equation.slice(0, operator_index);
   const number2 = equation.slice(operator_index + 1);
 
@@ -51,7 +50,7 @@ percentage_button.addEventListener("click", () => {
   if (operator_count === 1) {
     evaluate();
   }
-  equation = (equation === '') ? '' :  (parseFloat(equation) / 100).toFixed(5).toString();
+  equation = (equation === '') ? '' : (parseFloat(equation) / 100).toFixed(5).toString();
   screen.textContent = equation;
 });
 
@@ -59,7 +58,7 @@ square_button.addEventListener("click", () => {
   if (operator_count === 1) {
     evaluate();
   }
-  equation = (equation === '') ? '' :  (parseFloat(equation) ** 2).toString();
+  equation = (equation === '') ? '' : (parseFloat(equation) ** 2).toString();
   screen.textContent = equation;
 });
 
@@ -93,6 +92,9 @@ clear_button.addEventListener("click", () => {
 });
 
 toggle_button.addEventListener("click", () => {
+  if (operator_count === 1) {
+    evaluate();
+  }
   if (equation !== "") {
     equation = (parseFloat(equation) * -1).toString();
   }
@@ -100,10 +102,7 @@ toggle_button.addEventListener("click", () => {
 });
 
 backspace_button.addEventListener("click", () => {
-  equation =
-    equation === "Infinity" || equation === "-Infinity" || equation === "NaN"
-      ? ""
-      : equation.slice(0, -1);
+  equation = (equation === "Infinity" || equation === "-Infinity" || equation === "NaN") ? "" : equation.slice(0, -1);
   operator_count = equation.indexOf(operator, 1) === -1 ? 0 : operator_count;
   screen.textContent = equation;
 });
