@@ -3,21 +3,42 @@
 }
 
 .calculator {
-  width: 500px;
+  width: 95%;
+  max-width: 500px;
   background-color: rgb(37, 36, 36);
   box-shadow: inset 5px 5px 5px rgb(87, 87, 87), 2px 3px 6px rgb(20, 20, 20);
 }
-.calculator-screen {
+.calculator #screen {
   padding: 20px;
   height: 88px;
   background-color: #a7af7c;
   box-shadow: inset 5px 5px 5px #636847, inset -5px -5px 5px #636847;
 }
-.calculator button {
+.calculator .equation-button {
   box-shadow: inset 5px 5px 5px rgb(167, 167, 167), 2px 3px 6px rgb(20, 20, 20);
 }
-.calculator button:hover {
+.calculator .equation-button:hover {
   box-shadow: inset 5px 5px 5px rgb(78, 78, 78), 2px 3px 6px rgb(20, 20, 20);
+}
+.calculator #toggle-button,
+.calculator #backspace-button,
+.calculator #percentage-button {
+  box-shadow: inset 5px 5px 5px #fedc75, 2px 3px 6px rgb(20, 20, 20);
+}
+.calculator #toggle-button:hover,
+.calculator #backspace-button:hover,
+.calculator #percentage-button:hover {
+  box-shadow: inset 5px 5px 5px #d8a200, 2px 3px 6px rgb(20, 20, 20);
+}
+.calculator .operator-button,
+.calculator #square-button,
+.calculator #power-button {
+  box-shadow: inset 5px 5px 5px #3fb37d, 2px 3px 6px rgb(20, 20, 20);
+}
+.calculator .operator-button:hover,
+.calculator #square-button:hover,
+.calculator #power-button:hover {
+  box-shadow: inset 5px 5px 5px #065631, 2px 3px 6px rgb(20, 20, 20);
 }
 .calculator #clear-button {
   box-shadow: inset 5px 5px 5px rgb(255, 86, 86), 2px 3px 6px rgb(20, 20, 20);

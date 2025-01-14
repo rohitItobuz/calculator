@@ -15,19 +15,32 @@
 }
 
 .calculator {
-  width: 500px;
+  width: 95%;
+  max-width: 500px;
   background-color: rgb(37, 36, 36);
   @include shadow(rgb(87, 87, 87));
 
-  &-screen {
+  #screen {
     padding: 20px;
     height: 88px;
     background-color: #a7af7c;
     box-shadow: inset 5px 5px 5px #636847, inset -5px -5px 5px #636847;
   }
 
-  button {
+  .equation-button {
     @include button-shadow(rgb(167, 167, 167), rgb(78, 78, 78));
+  }
+
+  #toggle-button,
+  #backspace-button,
+  #percentage-button {
+    @include button-shadow(#fedc75, #d8a200);
+  }
+
+  .operator-button,
+  #square-button,
+  #power-button {
+    @include button-shadow(#3fb37d, #065631);
   }
 
   #clear-button {

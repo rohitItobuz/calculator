@@ -12,36 +12,47 @@
 <body>
     <h1 class="text-center mt-5 font-monospace">Calculator</h1>
     <div class="calculator mx-auto px-4 py-5 rounded-4 my-5">
-        <div class="calculator-screen mb-4 rounded-3 fs-2 text-end" id="screen"></div>
+        <div class="mb-4 rounded-3 fs-2 d-flex justify-content-end overflow-x-hidden" id="screen"></div>
         <div class="calculator-button-container px-3">
             <div class="row gap-3 mb-3">
                 <button class="calculator-button btn btn-danger col py-3 fs-3" id="clear-button">AC</button>
-                <button class="calculator-button btn btn-secondary col py-3 fs-3" id="toggle-button">-/+</button>
-                <button class="calculator-button btn btn-secondary col py-3 fs-3" id="backspace-button">C</button>
-                <button class="calculator-button btn btn-secondary col py-3 fs-3 operator-button">/</button>
+                <button class="calculator-button btn btn-warning col py-3 fs-3" id="toggle-button">-/+</button>
+                <button class="calculator-button btn btn-warning col py-3 fs-3" id="backspace-button">&#9003;</button>
+                <button class="calculator-button btn btn-warning col py-3 fs-3" id="percentage-button">%</button>
             </div>
+
+            <div class="row gap-3 mb-3">
+                <button class="calculator-button btn btn-success col py-3 fs-3"
+                    id="square-button">X<sup>2</sup></button>
+                <button class="calculator-button btn btn-success col py-3 fs-3 operator-button"
+                    value="^">X<sup>y</sup></button>
+                <button class="calculator-button btn btn-success col py-3 fs-3"
+                    id="power-button">10<sup>x</sup></button>
+                <button class="calculator-button btn btn-success col py-3 fs-3 operator-button" value="/">/</button>
+            </div>
+
             <div class="row gap-3 mb-3">
                 <button class="calculator-button btn btn-secondary col py-3 fs-3 equation-button">1</button>
                 <button class="calculator-button btn btn-secondary col py-3 fs-3 equation-button">2</button>
                 <button class="calculator-button btn btn-secondary col py-3 fs-3 equation-button">3</button>
-                <button class="calculator-button btn btn-secondary col py-3 fs-3 operator-button">X</button>
+                <button class="calculator-button btn btn-success col py-3 fs-3 operator-button" value="X">X</button>
             </div>
             <div class="row gap-3 mb-3">
                 <button class="calculator-button btn btn-secondary col py-3 fs-3 equation-button">4</button>
                 <button class="calculator-button btn btn-secondary col py-3 fs-3 equation-button">5</button>
                 <button class="calculator-button btn btn-secondary col py-3 fs-3 equation-button">6</button>
-                <button class="calculator-button btn btn-secondary col py-3 fs-3 operator-button">+</button>
+                <button class="calculator-button btn btn-success col py-3 fs-3 operator-button" value="+">+</button>
             </div>
             <div class="row gap-3 mb-3">
                 <button class="calculator-button btn btn-secondary col py-3 fs-3 equation-button">7</button>
                 <button class="calculator-button btn btn-secondary col py-3 fs-3 equation-button">8</button>
                 <button class="calculator-button btn btn-secondary col py-3 fs-3 equation-button">9</button>
-                <button class="calculator-button btn btn-secondary col py-3 fs-3 operator-button">-</button>
+                <button class="calculator-button btn btn-success col py-3 fs-3 operator-button" value="-">-</button>
             </div>
             <div class="row gap-3">
-                <button class="calculator-button btn btn-secondary col py-3 fs-3 equation-button">.</button>
                 <button class="calculator-button btn btn-secondary col py-3 fs-3 equation-button">0</button>
-                <button class="calculator-button btn btn-secondary col py-3 fs-3" id="percentage-button">%</button>
+                <button class="calculator-button btn btn-secondary col py-3 fs-3 equation-button">00</button>
+                <button class="calculator-button btn btn-secondary col py-3 fs-3 equation-button">.</button>
                 <button class="calculator-button btn btn-primary col py-3 fs-3" id="solve-button">=</button>
             </div>
         </div>
