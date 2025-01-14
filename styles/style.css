@@ -5,9 +5,29 @@
 .calculator {
   width: 500px;
   background-color: rgb(37, 36, 36);
+  box-shadow: inset 5px 5px 5px rgb(87, 87, 87), 2px 3px 6px rgb(20, 20, 20);
 }
 .calculator-screen {
   padding: 20px;
-  min-height: 88px;
-  background-color: #A7AF7C;
+  height: 88px;
+  background-color: #a7af7c;
+  box-shadow: inset 5px 5px 5px #636847, inset -5px -5px 5px #636847;
+}
+.calculator button {
+  box-shadow: inset 5px 5px 5px rgb(167, 167, 167), 2px 3px 6px rgb(20, 20, 20);
+}
+.calculator button:hover {
+  box-shadow: inset 5px 5px 5px rgb(78, 78, 78), 2px 3px 6px rgb(20, 20, 20);
+}
+.calculator #clear-button {
+  box-shadow: inset 5px 5px 5px rgb(255, 86, 86), 2px 3px 6px rgb(20, 20, 20);
+}
+.calculator #clear-button:hover {
+  box-shadow: inset 5px 5px 5px rgb(188, 44, 44), 2px 3px 6px rgb(20, 20, 20);
+}
+.calculator #solve-button {
+  box-shadow: inset 5px 5px 5px rgb(86, 165, 255), 2px 3px 6px rgb(20, 20, 20);
+}
+.calculator #solve-button:hover {
+  box-shadow: inset 5px 5px 5px rgb(44, 68, 188), 2px 3px 6px rgb(20, 20, 20);
 }/*# sourceMappingURL=style.css.map */

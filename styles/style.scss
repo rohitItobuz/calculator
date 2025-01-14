@@ -1,14 +1,40 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin shadow($color) {
+  box-shadow: inset 5px 5px 5px $color, 2px 3px 6px rgb(20, 20, 20);
+}
+
+@mixin button-shadow($color-primary, $color-secondary) {
+  @include shadow($color-primary);
+
+  &:hover {
+    @include shadow($color-secondary);
+  }
 }
 
 .calculator {
-    width: 500px;
-    background-color: rgb(37, 36, 36);
+  width: 500px;
+  background-color: rgb(37, 36, 36);
+  @include shadow(rgb(87, 87, 87));
 
-    &-screen{
-        padding: 20px;
-        min-height: 88px;
-        background-color: #A7AF7C;
-    }
+  &-screen {
+    padding: 20px;
+    height: 88px;
+    background-color: #a7af7c;
+    box-shadow: inset 5px 5px 5px #636847, inset -5px -5px 5px #636847;
+  }
+
+  button {
+    @include button-shadow(rgb(167, 167, 167), rgb(78, 78, 78));
+  }
+
+  #clear-button {
+    @include button-shadow(rgb(255, 86, 86), rgb(188, 44, 44));
+  }
+
+  #solve-button {
+    @include button-shadow(rgb(86, 165, 255), rgb(44, 68, 188));
+  }
 }
